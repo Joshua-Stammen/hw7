@@ -20,11 +20,12 @@ public:
     MyString();
     MyString(const char *cString);
     char * getInternalCString () const;
-    int getNlength () const;
+    int getNlength ();
     void reverseit ();
     int compareStr (const MyString &lhs, const MyString & rhs);
     friend ostream &operator << (ostream &os, const MyString &myString);
 
 };
+
 
 #endif //HW7_MYSTRING_H

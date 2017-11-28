@@ -12,6 +12,7 @@ MyString::MyString(const char *character)
 {
     int val = 1;
     internalCString = make_unique<char[]>(nlength);
+
     if (nlength > 1)
         while(*character != '\0')
         {
@@ -22,18 +23,22 @@ MyString::MyString(const char *character)
     return;
 }
 
-int MyString::getNlength() const {
-    for (int i = 0; i < getNlength(); i++)
-    {
+int MyString::getNlength(){
+    int size;
+    internalCString = make_unique<char[]>(nlength);
 
+    for (int i = 0; i < nlength; i++)
+    {
+        size++;
+        i++;
     }
-    return nlength;
+    return size;
 }
 
 char *MyString::getInternalCString() const
 {
     
-    return 0;
+    return internalCString.get();
 }
 
 
