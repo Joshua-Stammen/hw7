@@ -37,7 +37,7 @@ TEST_CASE("2) Testing MyString Empty")
 /*!
  * @test 3) Testing MyString Compare Method
  */
-/*TEST_CASE("3) Testing MyString Compare")
+TEST_CASE("3) Testing MyString Compare")
 {
     INFO("3) Testing MyString Compare");
     MyString ms1("Hello123");

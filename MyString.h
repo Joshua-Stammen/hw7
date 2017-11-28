@@ -22,7 +22,7 @@ public:
     char * getInternalCString () const;
     int getNlength ();
     void reverseit ();
-    int compareStr (const MyString &lhs, const MyString & rhs);
+    int compareStr (MyString &lhs, MyString &rhs);
     friend ostream &operator << (ostream &os, const MyString &myString);
 
 };

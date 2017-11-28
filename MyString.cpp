@@ -65,17 +65,25 @@ void MyString::reverseit()
 
 }
 
-int MyString::compareStr(const MyString &lhs, const MyString &rhs) {
-    if (&lhs < &rhs) {
+int MyString::compareStr(MyString &lhs, MyString &rhs) {
+    if (lhs.nlength < rhs.nlength) {
         return -1;
-    } else if (&lhs > &rhs){
+    } else if (rhs.nlength < lhs.nlength){
         return 1;
-    } else if (&lhs == &rhs){
-        return -2;
-    } else if (&lhs == &rhs){
-        return 0;
+    } else if (lhs.nlength == rhs.nlength) {
+        int returnInt = 0;
+        for (int i = 0; i < lhs.nlength; i++){
+            if(lhs.internalCString[i] == rhs.internalCString[i]){
+                returnInt = 0;
+            } else {
+                returnInt = -2;
+                i = lhs.nlength + 1;
+            }
+            return returnInt;
+        }
     }
 }
+
 
 /*ostream &operator<<(ostream &os) {
     return <#initializer#>;
