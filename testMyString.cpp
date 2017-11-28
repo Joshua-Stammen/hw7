@@ -101,4 +101,4 @@ TEST_CASE("1) Testing MyString")
         std::cout<<"5.1 Test <<operator"<<endl;
         std::cout<<ms<<endl;
     }
-}
+}*/
