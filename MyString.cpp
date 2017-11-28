@@ -4,7 +4,8 @@
 #include <memory>
 #include "MyString.h"
 
-// need doxygen comments
+// need doxygen comments                                                                            /usr/bin/doxygen
+//                                                                                                  /usr/bin/doxygen Doxyfile
 MyString::MyString()
 {
     internalCString = make_unique<char[]>(nlength);
