@@ -6,6 +6,8 @@
 
 MyString::MyString()
 {
+    internalCString = make_unique< >();
+
   return;
 }
 
@@ -17,15 +19,14 @@ MyString::MyString(const char *cString)
 int MyString::getNlength() const {
     for (int i = 0; i < getNlength(); i++)
     {
-        cout<< "Done"<<endl;
+
     }
     return nlength;
 }
 
 char *MyString::getInternalCString() const
 {
-    int MyString::*Pnlength = &MyString::nlength;
-
+    internalCString = make_unique<char[]>[];
     return 0;
 }
 
