@@ -72,7 +72,7 @@ TEST_CASE("3) Testing MyString Compare")
 /*!
  * @test 4) Testing MyString Revert Method
  */
-/*TEST_CASE("4) Testing MyString Revert")
+TEST_CASE("4) Testing MyString Revert")
 {
     INFO("4) Testing MyString Revert");
     MyString ms("Hello123");
@@ -91,7 +91,7 @@ TEST_CASE("3) Testing MyString Compare")
 /*!
  * @test 5) Testing MyString << opeartor
  */
-/*TEST_CASE("5) Testing MyString << operator")
+TEST_CASE("5) Testing MyString << operator")
 {
     INFO("5) Testing MyString << operator");
     MyString ms("Hello123");
@@ -101,4 +101,4 @@ TEST_CASE("3) Testing MyString Compare")
         std::cout<<"5.1 Test <<operator"<<endl;
         std::cout<<ms<<endl;
     }
-}*/
+}

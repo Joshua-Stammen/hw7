@@ -62,6 +62,29 @@ char *MyString::getInternalCString() const
 
 void MyString::reverseit()
 {
+    char temp[nlength];
+    for(int i = 0; i <= nlength; i++){
+        if(i < nlength)
+        {
+            temp[i] = internalCString[nlength -2 -i];
+        }
+        else if (i >= nlength)
+        {
+            temp[i] = '\0';
+        }
+    }
+
+    for (int i = 0; i <= nlength; ++i)
+    {
+        if(i < nlength)
+        {
+            internalCString[i] = temp[i];
+        }
+        else if (i >= nlength)
+        {
+            internalCString[i] = '\0';
+        }
+    }
 
 }
 
@@ -85,8 +108,9 @@ int MyString::compareStr(MyString &lhs, MyString &rhs) {
 }
 
 
-/*ostream &operator<<(ostream &os) {
-    return <#initializer#>;
-}*/
+ostream &operator<<(ostream &os, const MyString &myString) {
+    os << myString.getInternalCString();
+    return os;
+}
 
 
