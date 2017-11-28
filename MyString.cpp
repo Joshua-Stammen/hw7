@@ -6,13 +6,19 @@
 
 MyString::MyString()
 {
-    internalCString = make_unique< >();
-
-  return;
 }
 
-MyString::MyString(const char *cString)
+MyString::MyString(const char *character)
 {
+    int val = 1;
+    internalCString = make_unique<char[]>(nlength);
+    if (nlength > 1)
+        while(*character != '\0')
+        {
+            internalCString[val] = character[val];
+            val++;
+        }
+
     return;
 }
 
@@ -26,12 +32,13 @@ int MyString::getNlength() const {
 
 char *MyString::getInternalCString() const
 {
-    internalCString = make_unique<char[]>[];
+    
     return 0;
 }
 
 
-void MyString::reverseit() {
+void MyString::reverseit()
+{
 
 }
 
