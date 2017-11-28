@@ -21,7 +21,7 @@ TEST_CASE("1) Testing MyString")
 /*!
  * @test 2) Testing MyString Constructor Empty
  */
-/*TEST_CASE("2) Testing MyString Empty")
+TEST_CASE("2) Testing MyString Empty")
 {
     INFO("2) Testing MyString Empty");
     MyString ms("");
