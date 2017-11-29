@@ -4,14 +4,18 @@
 #include <memory>
 #include "MyString.h"
 
-// need doxygen comments                                                                            /usr/bin/doxygen
-//                                                                                                  /usr/bin/doxygen Doxyfile
+/*!
+ * Constructor
+ */
 MyString::MyString()
 {
     internalCString = make_unique<char[]>(nlength);
     nlength = 0;
 }
-
+/*!
+ * Declares val and size then checks to see if the character is null
+ * @param character
+ */
 MyString::MyString(const char *character)
 {
     int val = 0;
@@ -42,7 +46,10 @@ MyString::MyString(const char *character)
 
     return;
 }
-
+/*!
+ * Get the length of the string
+ * @return size
+ */
 int MyString::getNlength(){
     int size;
 
@@ -53,14 +60,19 @@ int MyString::getNlength(){
     }
     return size;
 }
-
+/*!
+ * GetsInternalCString
+ * @return what the InternalCstring got
+ */
 char *MyString::getInternalCString() const
 {
     
     return internalCString.get();
 }
 
-
+/*!
+ * Takes the string and reverses the order
+ */
 void MyString::reverseit()
 {
     char temp[nlength];
@@ -88,7 +100,12 @@ void MyString::reverseit()
     }
 
 }
-
+/*!
+ * Compares to if String is lhs or rhs or if they are equal
+ * @param lhs
+ * @param rhs
+ * @return
+ */
 int MyString::compareStr(MyString &lhs, MyString &rhs) {
     if (lhs.nlength < rhs.nlength) {
         return -1;
